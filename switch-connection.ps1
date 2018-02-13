@@ -1,7 +1,13 @@
-﻿If (-NOT ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole(`
-    [Security.Principal.WindowsBuiltInRole] "Administrator"))
+﻿$WindowsIdentity = [system.security.principal.windowsidentity]::GetCurrent()
+$Principal = New-Object System.Security.Principal.WindowsPrincipal($WindowsIdentity)
+$AdminRole = [System.Security.Principal.WindowsBuiltInRole]::Administrator
+if ($Principal.IsInRole($AdminRole))
 {
-    Write-Warning "You do not have Administrator rights to run this script!`nPlease re-run this script as an Administrator!"
+    Write-Host -ForegroundColor Green "Elevated PowerShell session detected. Continuing."
+}
+else
+{
+    Write-Host -ForegroundColor Red "This application/script must be run in an elevated PowerShell window. Please launch an elevated session and try again."
     Break
 }
 
