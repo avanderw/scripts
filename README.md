@@ -33,6 +33,7 @@ powershell.exe
 installs portable software for use with a flash disk
 
 - [openttd](https://www.openttd.org/)
+- [tetrinet](http://tetrinet.info/)
 
 cmd.exe
 
