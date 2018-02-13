@@ -57,12 +57,12 @@ $RegKey = 'HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\Con
 $Settings = (Get-ItemProperty -Path $RegKey).DefaultConnectionSettings
 
 if ($Local.NetConnectionStatus -eq 2) {
-    Write-Host Switching to Wifi
+    Write-Host Switching to Wireless Network Connection
     $Local.Disable() | Out-Null
     $Wifi.Enable() | Out-Null
     $Settings[8] = 1
 } else { # Default to local
-    Write-Host Switching to Local
+    Write-Host Switching to Local Area Connection
     $Local.Enable() | Out-Null
     $Wifi.Disable() | Out-Null
     $Settings[8] = 15
