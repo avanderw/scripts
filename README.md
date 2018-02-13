@@ -1,10 +1,12 @@
 # scripts
 
--  [setup development](#setup-development)
--  [setup portable](#setup-portable)
--  [switch-connection](#switch-connection)
+-  [setup development](#setup-development) - install development software
+-  [setup portable](#setup-portable) - install apps for a portable device
+-  [switch-connection](#switch-connection) - switches between "Local Area Connection" and "Wireless Network Connection"
 
 ## setup development
+
+installs software required for my development 
 
 - [chocolatey](https://chocolatey.org/)
 
@@ -16,7 +18,7 @@ powershell.exe
 
 	Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/avanderw/scripts/master/setup-development.ps1'))
 
-### installing behind a proxy
+### running behind a proxy
 
 cmd.exe
 
@@ -28,6 +30,8 @@ powershell.exe
 
 ## setup portable
 
+installs portable software for use with a flash disk
+
 - [openttd](https://www.openttd.org/)
 
 cmd.exe
@@ -38,7 +42,7 @@ powershell.exe
 
 	Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/avanderw/scripts/master/setup-portable.ps1'))
 
-### installing behind a proxy
+### running behind a proxy
 
 cmd.exe
 
@@ -62,7 +66,7 @@ powershell.exe
 
 	Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/avanderw/scripts/master/switch-connection.ps1'))
 
-### installing behind a proxy
+### running behind a proxy
 
 cmd.exe
 
