@@ -10,6 +10,7 @@ if(!(Test-Path -Path "$PSScriptRoot\OpenTTD" )){
     Add-Type -AssemblyName System.IO.Compression.FileSystem
     [System.IO.Compression.ZipFile]::ExtractToDirectory("$PSScriptRoot\OpenTTD.zip", "$PSScriptRoot\OpenTTD")
 
+    Out-File -FilePath "$PSScriptRoot\OpenTTD\openttd.cfg"
     Remove-Item -path "$PSScriptRoot\OpenTTD.zip"
 }
 
