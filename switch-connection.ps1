@@ -3,7 +3,7 @@ $Principal = New-Object System.Security.Principal.WindowsPrincipal($WindowsIdent
 $AdminRole = [System.Security.Principal.WindowsBuiltInRole]::Administrator
 if ($Principal.IsInRole($AdminRole))
 {
-    Write-Host -ForegroundColor Green "Elevated PowerShell session detected. Continuing."
+    Write-Host -ForegroundColor Green "Elevated PowerShell session detected."
 }
 else
 {
@@ -40,7 +40,7 @@ function Get-ProxyFromByte
     
     switch($byte) 
     {
-        1 {"Proxy off"}
+        1 {"Proxy turned off"}
         3 {"Use a proxy server for your LAN"}
         5 {"Use automatic configuration script"}
         7 {"Use automatic configuration & Use a proxy server for your LAN"}
